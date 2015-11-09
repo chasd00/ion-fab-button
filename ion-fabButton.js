@@ -26,13 +26,13 @@ angular.module('ion-fab-button', [])
             var savePos = 0;
             targetEl.bind('scroll', function (e) {
                 //console.log(savePos)
-                if (savePos < e.detail.scrollTop) {
-                    savePos = e.detail.scrollTop;
+                if (savePos < e.originalEvent.detail.scrollTop) {
+                    savePos = e.originalEvent.detail.scrollTop;
                     element.removeClass('fadeInUp animated');
                     element.addClass('fadeOutDown animated');
                 }
-                if (savePos > e.detail.scrollTop) {
-                    savePos = e.detail.scrollTop;
+                if (savePos > e.originalEvent.detail.scrollTop) {
+                    savePos = e.originalEvent.detail.scrollTop;
                     element.removeClass('fadeOutDown animated');
                     element.addClass('fadeInUp animated');
                 }
